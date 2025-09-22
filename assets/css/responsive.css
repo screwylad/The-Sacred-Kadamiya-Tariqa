@@ -1,0 +1,179 @@
+/* 
+ * The Holy Kadamiya Tariqa - Responsive Styles
+ * Created: September 22, 2025
+ * Author: GitHub Copilot
+ */
+
+/* Media Queries for Responsive Design */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    h1 {
+        font-size: 3.6rem;
+    }
+    
+    h2 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 3.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    
+    .chatbot-container {
+        width: calc(100% - 2rem);
+        max-width: 30rem;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-content,
+    .contact-container {
+        gap: var(--spacing-md);
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Specific adjustments for large screens if needed */
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Specific Component Responsive Adjustments */
+
+/* Navigation */
+@media (max-width: 991px) {
+    .menu-toggle {
+        display: block;
+        z-index: 2000;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-medium);
+        z-index: 1500;
+        box-shadow: var(--shadow-medium);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        margin: var(--spacing-md) 0;
+    }
+}
+
+/* About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-image {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* Hierarchy Section */
+@media (max-width: 768px) {
+    .hierarchy-chart {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* FAQ Section */
+@media (max-width: 576px) {
+    .faq-question {
+        font-size: 1.6rem;
+        padding: var(--spacing-sm);
+    }
+}
+
+/* Payment Section */
+@media (max-width: 576px) {
+    .payment-container {
+        padding: var(--spacing-md);
+    }
+    
+    .payment-options {
+        flex-wrap: wrap;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .chatbot-widget,
+    .btn {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    h1 {
+        font-size: 24pt;
+    }
+    
+    h2 {
+        font-size: 20pt;
+    }
+    
+    h3 {
+        font-size: 16pt;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        margin-bottom: 20pt;
+    }
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure payment gateway for the Sacred Kadamiya Tariqa - Process payments easily and securely.">
+    <meta name="keywords" content="Kadamiya Tariqa Payment Gateway, Secure Payments, Online Transactions, Tariqa Services">
+    <meta name="author" content="The Holy Kadamiya Tariqa">
+    <title>Payment Gateway - The Sacred Kadamiya Tariqa</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-placeholder" aria-label="Logo Placeholder">K</div>
+                    <span class="logo-text">The Sacred Kadamiya Tariqa</span>
+                </div>
+                
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="hierarchy.html" class="nav-link">Hierarchy</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+                    <li class="nav-item"><a href="practices.html" class="nav-link">Practices</a></li>
+                    <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+                    <li class="nav-item"><a href="payment.html" class="nav-link active">Payment Gateway</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1 class="page-title">Payment Gateway</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Payment Gateway</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Payment Gateway Introduction -->
+    <section class="section" id="payment-intro">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Secure Payment Gateway</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Process payments securely through our platform</p>
+            </div>
+            
+            <div class="payment-intro-content reveal">
+                <p>Welcome to the Sacred Kadamiya Tariqa payment gateway.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Form Section -->
+    <section class="section bg-light" id="payment-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Process Payment</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">All payments are processed securely through Stripe</p>
+            </div>
+            
+            <div class="payment-container reveal">
+                <div class="payment-options">
+                    <div class="amount-selector">
+                        <h3>Select Amount</h3>
+                        <div class="amount-options">
+                            <button class="amount-option" data-amount="10">$10</button>
+                            <button class="amount-option" data-amount="25">$25</button>
+                            <button class="amount-option" data-amount="50">$50</button>
+                            <button class="amount-option" data-amount="100">$100</button>
+                            <button class="amount-option" data-amount="500">$500</button>
+                            <button class="amount-option custom-amount">Custom</button>
+                        </div>
+                        <div class="custom-amount-input" style="display: none;">
+                            <label for="custom-amount">Enter Amount ($):</label>
+                            <input type="number" id="custom-amount" min="1" step="1" placeholder="Enter amount">
+                        </div>
+                    </div>
+                    
+                    <div class="payment-type">
+                        <h3>Payment Frequency</h3>
+                        <div class="payment-type-options">
+                            <div class="payment-type-option">
+                                <input type="radio" name="payment-type" id="one-time" value="one-time" checked>
+                                <label for="one-time">One-time Payment</label>
+                            </div>
+                            <div class="payment-type-option">
+                                <input type="radio" name="payment-type" id="monthly" value="monthly">
+                                <label for="monthly">Monthly Subscription</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-purpose">
+                        <h3>Payment Purpose</h3>
+                        <select id="payment-purpose" class="form-control">
+                            <option value="service">Service Fee</option>
+                            <option value="materials">Educational Materials</option>
+                            <option value="membership">Membership</option>
+                            <option value="event">Event Registration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="payment-form-wrapper">
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-element">Credit or Debit Card</label>
+                            <div id="card-element" class="form-control card-field">
+                                <!-- Stripe Card Element will be inserted here -->
+                            </div>
+                            <div id="card-errors" role="alert" class="payment-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" class="form-control" rows="3" placeholder="Include a message with your payment..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" id="submit-button" class="btn btn-primary payment-button">
+                                <span id="button-text">Process Payment</span>
+                                <span id="spinner" class="spinner hidden"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Success Section (Hidden Initially) -->
+    <section class="section" id="payment-success" style="display: none;">
+        <div class="container">
+            <div class="success-message text-center reveal">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Thank You for Your Support!</h2>
+                <p class="success-details">Your payment has been successfully processed. A confirmation email has been sent to your inbox with the details of your transaction.</p>
+                <p class="success-blessing">May Allah bless you abundantly for your generosity and support of the spiritual path.</p>
+                <div class="success-actions">
+                    <a href="index.html" class="btn btn-secondary">Return to Homepage</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Payment Methods -->
+    <section class="section" id="alternative-payments">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Other Ways to pay</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Alternative methods for supporting our work</p>
+            </div>
+            
+            <div class="alternative-methods-container">
+                <div class="alternative-method reveal-left">
+                    <div class="method-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="method-title">Bank Transfer</h3>
+                    <div class="method-details">
+                        <p><strong>Account Name:</strong> The Sacred Kadamiya Tariqa</p>
+                        <p><strong>Bank:</strong> International Islamic Bank</p>
+                        <p><strong>Account Number:</strong> 12345678910</p>
+                        <p><strong>SWIFT/BIC:</strong> IIBDBD01</p>
+                    </div>
+                </div>
+                
+                <div class="alternative-method reveal">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="method-title">Mail a Check</h3>
+                    <div class="method-details">
+                        <p>Please make checks payable to "The Sacred Kadamiya Tariqa" and mail to:</p>
+                        <p>DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF)<br>
+                        UTTAR PAWSHAR, SIRAJDIKHAN<br>
+                        MUNSHIGANJ, DHAKA<br>
+                        BANGLADESH</p>
+                    </div>
+                </div>
+                
+                <div class="alternative-method reveal-right">
+                    <div class="method-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="method-title">Mobile Banking</h3>
+                    <div class="method-details">
+                        <p><strong>bKash:</strong> +8801725774252</p>
+                        <p><strong>Nagad:</strong> +8801725774252</p>
+                        <p><strong>Rocket:</strong> +8801926266156</p>
+                        <p>Please include "Payment" in the reference.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light" id="payment-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Payment FAQs</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Are payments tax-deductible?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tax deductibility depends on your country of residence and local tax laws. For payments in Bangladesh, we are registered as a charitable organization, and certain payments may qualify for tax benefits. Please consult with your tax advisor for specific guidance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>How will my payment be used?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your payment will be used to support the various activities of the Sacred Kadamiya Tariqa, including maintenance of spiritual centers, publication of educational materials, community services, and outreach programs. If you've designated a specific purpose for your payment, we will honor that designation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Can I make an anonymous payment?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can make an anonymous payment. Simply select the "Make Anonymous" option during the payment process. Your personal information will still be processed for the transaction but will not be publicly acknowledged.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Is my payment information secure?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all payment information is processed securely through Stripe, a PCI-compliant payment processor. Your credit card information is never stored on our servers, and all transactions are encrypted using industry-standard SSL technology.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Can I cancel my recurring payment?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your recurring payment at any time by logging into your account or by contacting us directly at darbareshahekadmi@gmail.com with your request to cancel.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Can I make a payment in memory or honor of someone?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can make a dedicated payment in memory or honor of a loved one. Simply indicate this in the "Message" field during the payment process, and we will acknowledge your tribute appropriately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h4 class="footer-title">The Sacred Kadamiya Tariqa</h4>
+                    </div>
+                    <p>A mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="hierarchy.html">Hierarchy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="rules.html">Rules & Instructions</a></li>
+                        <li><a href="practices.html">Daily Practices</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div class="contact-details">
+                            <p>DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF), UTTAR PAWSHAR, SIRAJDIKHAN, MUNSHIGANJ, DHAKA, BANGLADESH</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div class="contact-details">
+                            <p>+8801725774252</p>
+                            <p>+8801926266156</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div class="contact-details">
+                            <p><a href="mailto:darbareshahekadmi@gmail.com">darbareshahekadmi@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-social-links">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com/thekadimiatarika" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/c/kadimiatarika" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Sacred Kadamiya Tariqa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <div class="chatbot-toggle">
+            <i class="fas fa-comment-dots chatbot-icon"></i>
+        </div>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3 class="chatbot-title">Kadamiya Tariqa Support</h3>
+                <div class="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="chatbot-messages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <form class="chatbot-input">
+                <input type="text" placeholder="Ask a question..." required>
+                <button type="submit" class="chatbot-submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/payment.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Amount selection
+            const amountOptions = document.querySelectorAll('.amount-option');
+            const customAmountInput = document.querySelector('.custom-amount-input');
+            
+            amountOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    amountOptions.forEach(btn => btn.classList.remove('selected'));
+                    this.classList.add('selected');
+                    
+                    if (this.classList.contains('custom-amount')) {
+                        customAmountInput.style.display = 'block';
+                    } else {
+                        customAmountInput.style.display = 'none';
+                    }
+                });
+            });
+            
+            // FAQ accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.faq-icon i');
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.classList.replace('fa-plus', 'fa-minus');
+                    } else {
+                        answer.style.maxHeight = '0';
+                        icon.classList.replace('fa-minus', 'fa-plus');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

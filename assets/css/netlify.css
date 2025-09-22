@@ -1,0 +1,8 @@
+/* 
+ * Netlify specific styles
+ */
+
+/* Hide honeypot field for Netlify forms */
+.hidden {
+    display: none !important;
+}

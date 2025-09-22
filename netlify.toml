@@ -1,0 +1,16 @@
+[build]
+  publish = "/"
+
+[functions]
+  directory = "functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+  conditions = {Role = ["admin"]}
+
+# Enable Netlify Forms
+[build.processing.html]
+  pretty_urls = true
