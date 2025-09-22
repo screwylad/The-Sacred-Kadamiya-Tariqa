@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Additional fonts for Bengali and Hindi -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&family=Hind+Siliguri:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,6 +26,11 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/netlify.css">
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    
+    <!-- Load i18n scripts -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n/i18n-loader.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -32,7 +39,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <div class="logo-placeholder" aria-label="Logo Placeholder">K</div>
-                    <span class="logo-text">The Sacred Kadamiya Tariqa</span>
+                    <span class="logo-text" data-i18n="header.title">The Sacred Kadamiya Tariqa</span>
                 </div>
                 
                 <div class="menu-toggle">
@@ -40,17 +47,27 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="hierarchy.html" class="nav-link">Hierarchy</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
-                    <li class="nav-item"><a href="practices.html" class="nav-link">Practices</a></li>
-                    <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
-                    <li class="nav-item"><a href="payment.html" class="nav-link">Payment Gateway</a></li>
-                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="header.about">About</a></li>
+                    <li class="nav-item"><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
+                    <li class="nav-item"><a href="rules.html" class="nav-link" data-i18n="header.rules">Rules</a></li>
+                    <li class="nav-item"><a href="practices.html" class="nav-link" data-i18n="header.practices">Practices</a></li>
+                    <li class="nav-item"><a href="downloads.html" class="nav-link" data-i18n="header.downloads">Downloads</a></li>
+                    <li class="nav-item"><a href="payment.html" class="nav-link" data-i18n="nav.payment">Payment Gateway</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link" data-i18n="header.gallery">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="header.contact">Contact</a></li>
                 </ul>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <span class="language-label" data-i18n="language.select">Language:</span>
+                    <select id="language-select">
+                        <option value="en" data-i18n="language.english">English</option>
+                        <option value="bn" data-i18n="language.bengali">Bengali</option>
+                        <option value="hi" data-i18n="language.hindi">Hindi</option>
+                    </select>
+                </div>
             </nav>
         </div>
     </header>
@@ -61,7 +78,7 @@
             <h1 class="page-title">Contact Us</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                 </ol>
             </nav>
@@ -147,48 +164,48 @@
                     <input type="hidden" name="form-name" value="contact" />
                     <div class="form-row">
                         <div class="form-group half">
-                            <label for="name">Full Name*</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="name" data-i18n="contact.form.nameLabel">Full Name*</label>
+                            <input type="text" id="name" name="name" class="form-control" required data-i18n-placeholder="contact.form.namePlaceholder">
                         </div>
                         
                         <div class="form-group half">
-                            <label for="email">Email Address*</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="email" data-i18n="contact.form.emailLabel">Email Address*</label>
+                            <input type="email" id="email" name="email" class="form-control" required data-i18n-placeholder="contact.form.emailPlaceholder">
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group half">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-control">
+                            <label for="phone" data-i18n="contact.form.phoneLabel">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" data-i18n-placeholder="contact.form.phonePlaceholder">
                         </div>
                         
                         <div class="form-group half">
-                            <label for="subject">Subject*</label>
+                            <label for="subject" data-i18n="contact.form.subjectLabel">Subject*</label>
                             <select id="subject" name="subject" class="form-control" required>
-                                <option value="" disabled selected>Select Subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="spiritual">Spiritual Guidance</option>
-                                <option value="membership">Becoming a Follower</option>
-                                <option value="event">Event Information</option>
-                                <option value="payment">Payment Questions</option>
-                                <option value="other">Other</option>
+                                <option value="" disabled selected data-i18n="contact.form.subjectPlaceholder">Select Subject</option>
+                                <option value="general" data-i18n="contact.form.subjectGeneral">General Inquiry</option>
+                                <option value="spiritual" data-i18n="contact.form.subjectSpiritual">Spiritual Guidance</option>
+                                <option value="membership" data-i18n="contact.form.subjectMembership">Becoming a Follower</option>
+                                <option value="event" data-i18n="contact.form.subjectEvent">Event Information</option>
+                                <option value="payment" data-i18n="contact.form.subjectPayment">Payment Questions</option>
+                                <option value="other" data-i18n="contact.form.subjectOther">Other</option>
                             </select>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Message*</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        <label for="message" data-i18n="contact.form.messageLabel">Message*</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
                     </div>
                     
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="consent-check" required>
-                        <label class="form-check-label" for="consent-check">I consent to the Sacred Kadamiya Tariqa collecting and storing my data for the purpose of responding to my inquiry.</label>
+                        <label class="form-check-label" for="consent-check" data-i18n="contact.form.consentLabel">I consent to the Sacred Kadamiya Tariqa collecting and storing my data for the purpose of responding to my inquiry.</label>
                     </div>
                     
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submitButton">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -199,44 +216,44 @@
     <section class="section" id="visit-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Visit Us</h2>
+                <h2 class="section-title" data-i18n="contact.visit.title">Visit Us</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">Join our spiritual gatherings and events</p>
+                <p class="section-subtitle" data-i18n="contact.visit.subtitle">Join our spiritual gatherings and events</p>
             </div>
             
             <div class="visit-container">
                 <div class="visit-info reveal">
-                    <h3 class="visit-title">Weekly Gatherings</h3>
-                    <p class="visit-description">We hold weekly spiritual gatherings (Majlis) open to all sincere seekers, where we engage in collective remembrance (dhikr), spiritual talks, and community bonding.</p>
+                    <h3 class="visit-title" data-i18n="contact.visit.weeklyTitle">Weekly Gatherings</h3>
+                    <p class="visit-description" data-i18n="contact.visit.weeklyDescription">We hold weekly spiritual gatherings (Majlis) open to all sincere seekers, where we engage in collective remembrance (dhikr), spiritual talks, and community bonding.</p>
                     
                     <div class="visit-schedule">
                         <div class="schedule-item">
-                            <div class="schedule-day">Friday</div>
-                            <div class="schedule-time">After Jumu'ah Prayer (approx. 2:00 PM)</div>
-                            <div class="schedule-location">Main Center, Darbar-e-Shahe Kadmi</div>
+                            <div class="schedule-day" data-i18n="contact.visit.dayFriday">Friday</div>
+                            <div class="schedule-time" data-i18n="contact.visit.timeFriday">After Jumu'ah Prayer (approx. 2:00 PM)</div>
+                            <div class="schedule-location" data-i18n="contact.visit.locationFriday">Main Center, Darbar-e-Shahe Kadmi</div>
                         </div>
                         
                         <div class="schedule-item">
-                            <div class="schedule-day">Monday</div>
-                            <div class="schedule-time">After Maghrib Prayer</div>
-                            <div class="schedule-location">Dhaka Branch Center</div>
+                            <div class="schedule-day" data-i18n="contact.visit.dayMonday">Monday</div>
+                            <div class="schedule-time" data-i18n="contact.visit.timeMonday">After Maghrib Prayer</div>
+                            <div class="schedule-location" data-i18n="contact.visit.locationMonday">Dhaka Branch Center</div>
                         </div>
                     </div>
                     
                     <div class="visit-note">
                         <i class="fas fa-info-circle"></i>
-                        <p>First-time visitors are requested to contact us beforehand so we can properly welcome you and provide any necessary guidance.</p>
+                        <p data-i18n="contact.visit.firstTimeNote">First-time visitors are requested to contact us beforehand so we can properly welcome you and provide any necessary guidance.</p>
                     </div>
                 </div>
                 
                 <div class="visitor-etiquette reveal">
-                    <h3 class="etiquette-title">Visitor Etiquette</h3>
+                    <h3 class="etiquette-title" data-i18n="contact.etiquette.title">Visitor Etiquette</h3>
                     <ul class="etiquette-list">
-                        <li>Dress modestly and respectfully (head covering recommended for women)</li>
-                        <li>Remove shoes before entering prayer halls and meditation spaces</li>
-                        <li>Maintain a quiet and respectful demeanor</li>
-                        <li>Follow the guidance of our representatives</li>
-                        <li>Refrain from photography unless permission is granted</li>
+                        <li data-i18n="contact.etiquette.dress">Dress modestly and respectfully (head covering recommended for women)</li>
+                        <li data-i18n="contact.etiquette.shoes">Remove shoes before entering prayer halls and meditation spaces</li>
+                        <li data-i18n="contact.etiquette.quiet">Maintain a quiet and respectful demeanor</li>
+                        <li data-i18n="contact.etiquette.guidance">Follow the guidance of our representatives</li>
+                        <li data-i18n="contact.etiquette.photography">Refrain from photography unless permission is granted</li>
                     </ul>
                 </div>
             </div>
@@ -247,31 +264,31 @@
     <section class="section" id="social-media">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Connect With Us</h2>
+                <h2 class="section-title" data-i18n="contact.social.title">Connect With Us</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">Follow us on social media for updates and spiritual insights</p>
+                <p class="section-subtitle" data-i18n="contact.social.subtitle">Follow us on social media for updates and spiritual insights</p>
             </div>
             
             <div class="social-media-container reveal">
                 <div class="social-media-links">
                     <a href="https://facebook.com/thekadimiatarika" class="social-link" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook-f"></i>
-                        <span>Facebook</span>
+                        <span data-i18n="social.facebook">Facebook</span>
                     </a>
                     
                     <a href="https://youtube.com/c/kadimiatarika" class="social-link" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-youtube"></i>
-                        <span>YouTube</span>
+                        <span data-i18n="social.youtube">YouTube</span>
                     </a>
                 </div>
                 
                 <div class="newsletter-signup">
-                    <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
-                    <p class="newsletter-description">Receive spiritual insights, event updates, and announcements directly in your inbox.</p>
+                    <h3 class="newsletter-title" data-i18n="contact.newsletter.title">Subscribe to Our Newsletter</h3>
+                    <p class="newsletter-description" data-i18n="contact.newsletter.description">Receive spiritual insights, event updates, and announcements directly in your inbox.</p>
                     <form class="newsletter-form">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email Address" required>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                            <input type="email" class="form-control" data-i18n-placeholder="contact.newsletter.emailPlaceholder" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary" data-i18n="contact.newsletter.subscribeButton">Subscribe</button>
                         </div>
                     </form>
                 </div>
@@ -294,8 +311,8 @@
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="hierarchy.html">Hierarchy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                        <li><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
                         <li><a href="rules.html">Rules & Instructions</a></li>
                         <li><a href="practices.html">Daily Practices</a></li>
                     </ul>
@@ -346,7 +363,7 @@
         </div>
         <div class="chatbot-container">
             <div class="chatbot-header">
-                <h3 class="chatbot-title">Kadamiya Tariqa Support</h3>
+                <h3 class="chatbot-title" data-i18n="chatbot.title">Kadamiya Tariqa Support</h3>
                 <div class="chatbot-close">
                     <i class="fas fa-times"></i>
                 </div>
@@ -355,7 +372,7 @@
                 <!-- Messages will be added here dynamically -->
             </div>
             <form class="chatbot-input">
-                <input type="text" placeholder="Ask a question..." required>
+                <input type="text" data-i18n-placeholder="chatbot.placeholder" placeholder="Ask a question..." required>
                 <button type="submit" class="chatbot-submit">
                     <i class="fas fa-paper-plane"></i>
                 </button>
@@ -366,6 +383,26 @@
     <!-- JavaScript Files -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/chatbot-i18n.js"></script>
+    
+    <script>
+        // Force language check on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Contact page loaded');
+            
+            // Check stored language and apply it
+            const savedLanguage = localStorage.getItem('language');
+            if (savedLanguage && ['en', 'bn', 'hi'].includes(savedLanguage)) {
+                console.log('Applying saved language:', savedLanguage);
+                // If i18n is available, use it
+                if (window.i18n && window.i18n.changeLanguage) {
+                    window.i18n.changeLanguage(savedLanguage);
+                } else {
+                    console.warn('i18n system not available yet');
+                }
+            }
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Form submission
@@ -397,5 +434,10 @@
             }
         });
     </script>
+<script src="assets/js/fix-language-switching.js"></script>
 </body>
 </html>
+
+
+
+

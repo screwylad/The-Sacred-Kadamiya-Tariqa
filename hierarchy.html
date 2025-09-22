@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Load i18n scripts -->
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n/i18n-loader.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -31,7 +36,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <div class="logo-placeholder" aria-label="Logo Placeholder">K</div>
-                    <span class="logo-text">The Sacred Kadamiya Tariqa</span>
+                    <span class="logo-text" data-i18n="header.title">The Sacred Kadamiya Tariqa</span>
                 </div>
                 
                 <div class="menu-toggle">
@@ -39,17 +44,26 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="hierarchy.html" class="nav-link active">Hierarchy</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
-                    <li class="nav-item"><a href="practices.html" class="nav-link">Practices</a></li>
-                    <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="header.about">About</a></li>
+                    <li class="nav-item"><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
+                    <li class="nav-item"><a href="rules.html" class="nav-link" data-i18n="header.rules">Rules</a></li>
+                    <li class="nav-item"><a href="practices.html" class="nav-link" data-i18n="header.practices">Practices</a></li>
+                    <li class="nav-item"><a href="downloads.html" class="nav-link" data-i18n="header.downloads">Downloads</a></li>
                     <li class="nav-item"><a href="payment.html" class="nav-link">Payment Gateway</a></li>
-                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link" data-i18n="header.gallery">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="header.contact">Contact</a></li>
                 </ul>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <span class="language-label" data-i18n="general.selectLanguage">Language:</span>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="bn">Bengali</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
             </nav>
         </div>
     </header>
@@ -60,7 +74,7 @@
             <h1 class="page-title">Hierarchy of the Sacred Tarika</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Hierarchy</li>
                 </ol>
             </nav>
@@ -215,8 +229,8 @@
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="hierarchy.html">Hierarchy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                        <li><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
                         <li><a href="rules.html">Rules & Instructions</a></li>
                         <li><a href="practices.html">Daily Practices</a></li>
                     </ul>
@@ -287,5 +301,10 @@
     <!-- JavaScript Files -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/chatbot.js"></script>
+<script src="assets/js/fix-language-switching.js"></script>
 </body>
 </html>
+
+
+
+

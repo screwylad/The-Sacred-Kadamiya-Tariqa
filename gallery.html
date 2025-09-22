@@ -26,7 +26,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-</head>
+
+    <!-- Load i18n scripts -->
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n/i18n-loader.js"></script>
+    </head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -34,7 +39,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <div class="logo-placeholder" aria-label="Logo Placeholder">K</div>
-                    <span class="logo-text">The Sacred Kadamiya Tariqa</span>
+                    <span class="logo-text" data-i18n="header.title">The Sacred Kadamiya Tariqa</span>
                 </div>
                 
                 <div class="menu-toggle">
@@ -42,17 +47,26 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="hierarchy.html" class="nav-link">Hierarchy</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
-                    <li class="nav-item"><a href="practices.html" class="nav-link">Practices</a></li>
-                    <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="header.about">About</a></li>
+                    <li class="nav-item"><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
+                    <li class="nav-item"><a href="rules.html" class="nav-link" data-i18n="header.rules">Rules</a></li>
+                    <li class="nav-item"><a href="practices.html" class="nav-link" data-i18n="header.practices">Practices</a></li>
+                    <li class="nav-item"><a href="downloads.html" class="nav-link" data-i18n="header.downloads">Downloads</a></li>
                     <li class="nav-item"><a href="payment.html" class="nav-link">Payment Gateway</a></li>
-                    <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link" data-i18n="header.gallery">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="header.contact">Contact</a></li>
                 </ul>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <span class="language-label" data-i18n="general.selectLanguage">Language:</span>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="bn">Bengali</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
             </nav>
         </div>
     </header>
@@ -63,7 +77,7 @@
             <h1 class="page-title">Gallery</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                 </ol>
             </nav>
@@ -91,12 +105,12 @@
         <div class="container">
             <div class="gallery-filter reveal">
                 <ul class="filter-list">
-                    <li class="filter-item active" data-filter="all">All</li>
-                    <li class="filter-item" data-filter="gatherings">Gatherings</li>
-                    <li class="filter-item" data-filter="ceremonies">Ceremonies</li>
-                    <li class="filter-item" data-filter="dhikr">Dhikr Sessions</li>
-                    <li class="filter-item" data-filter="locations">Sacred Sites</li>
-                    <li class="filter-item" data-filter="community">Community</li>
+                    <li class="filter-item active" data-filter="all" data-i18n="gallery.filter.all">All</li>
+                    <li class="filter-item" data-filter="gatherings" data-i18n="gallery.filter.gatherings">Gatherings</li>
+                    <li class="filter-item" data-filter="ceremonies" data-i18n="gallery.filter.ceremonies">Ceremonies</li>
+                    <li class="filter-item" data-filter="dhikr" data-i18n="gallery.filter.dhikr">Dhikr Sessions</li>
+                    <li class="filter-item" data-filter="locations" data-i18n="gallery.filter.locations">Sacred Sites</li>
+                    <li class="filter-item" data-filter="community" data-i18n="gallery.filter.community">Community</li>
                 </ul>
             </div>
         </div>
@@ -113,8 +127,8 @@
                             <img src="assets/images/gallery-placeholder-1.jpg" alt="Annual Gathering" class="gallery-image">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3 class="gallery-title">Annual Gathering</h3>
-                                    <p class="gallery-date">April 2023</p>
+                                    <h3 class="gallery-title" data-i18n="gallery.gatherings.item1.title">Annual Gathering</h3>
+                                    <p class="gallery-date" data-i18n="gallery.gatherings.item1.date">April 2023</p>
                                 </div>
                             </div>
                         </a>
@@ -125,8 +139,8 @@
                             <img src="assets/images/gallery-placeholder-2.jpg" alt="Spiritual Retreat" class="gallery-image">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3 class="gallery-title">Spiritual Retreat</h3>
-                                    <p class="gallery-date">June 2023</p>
+                                    <h3 class="gallery-title" data-i18n="gallery.gatherings.item2.title">Spiritual Retreat</h3>
+                                    <p class="gallery-date" data-i18n="gallery.gatherings.item2.date">June 2023</p>
                                 </div>
                             </div>
                         </a>
@@ -137,8 +151,8 @@
                             <img src="assets/images/gallery-placeholder-3.jpg" alt="Weekly Circle" class="gallery-image">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3 class="gallery-title">Weekly Circle</h3>
-                                    <p class="gallery-date">Ongoing</p>
+                                    <h3 class="gallery-title" data-i18n="gallery.gatherings.item3.title">Weekly Circle</h3>
+                                    <p class="gallery-date" data-i18n="gallery.gatherings.item3.date">Ongoing</p>
                                 </div>
                             </div>
                         </a>
@@ -431,48 +445,48 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <h4 class="footer-title">The Sacred Kadamiya Tariqa</h4>
+                        <h4 class="footer-title" data-i18n="footer.title">The Sacred Kadamiya Tariqa</h4>
                     </div>
-                    <p>A mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity.</p>
+                    <p data-i18n="footer.description">A mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Quick Links</h4>
+                    <h4 class="footer-title" data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="hierarchy.html">Hierarchy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="rules.html">Rules & Instructions</a></li>
-                        <li><a href="practices.html">Daily Practices</a></li>
+                        <li><a href="about.html" data-i18n="header.about">About Us</a></li>
+                        <li><a href="hierarchy.html" data-i18n="header.hierarchy">Hierarchy</a></li>
+                        <li><a href="faq.html" data-i18n="header.faq">FAQ</a></li>
+                        <li><a href="rules.html" data-i18n="header.rules">Rules & Instructions</a></li>
+                        <li><a href="practices.html" data-i18n="header.practices">Daily Practices</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact Us</h4>
+                    <h4 class="footer-title" data-i18n="footer.contactUs">Contact Us</h4>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt contact-icon"></i>
                         <div class="contact-details">
-                            <p>DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF), UTTAR PAWSHAR, SIRAJDIKHAN, MUNSHIGANJ, DHAKA, BANGLADESH</p>
+                            <p data-i18n="footer.address">DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF), UTTAR PAWSHAR, SIRAJDIKHAN, MUNSHIGANJ, DHAKA, BANGLADESH</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone contact-icon"></i>
                         <div class="contact-details">
-                            <p>+8801725774252</p>
-                            <p>+8801926266156</p>
+                            <p data-i18n="footer.phone1">+8801725774252</p>
+                            <p data-i18n="footer.phone2">+8801926266156</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope contact-icon"></i>
                         <div class="contact-details">
-                            <p><a href="mailto:darbareshahekadmi@gmail.com">darbareshahekadmi@gmail.com</a></p>
+                            <p><a href="mailto:darbareshahekadmi@gmail.com" data-i18n="footer.email">darbareshahekadmi@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-social-links">
-                <h4>Connect With Us</h4>
+                <h4 data-i18n="footer.connect">Connect With Us</h4>
                 <div class="social-links">
                     <a href="https://facebook.com/thekadimiatarika" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://youtube.com/c/kadimiatarika" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
@@ -480,7 +494,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 The Sacred Kadamiya Tariqa. All Rights Reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 The Sacred Kadamiya Tariqa. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -492,7 +506,7 @@
         </div>
         <div class="chatbot-container">
             <div class="chatbot-header">
-                <h3 class="chatbot-title">Kadamiya Tariqa Support</h3>
+                <h3 class="chatbot-title" data-i18n="chatbot.title">Kadamiya Tariqa Support</h3>
                 <div class="chatbot-close">
                     <i class="fas fa-times"></i>
                 </div>
@@ -501,8 +515,8 @@
                 <!-- Messages will be added here dynamically -->
             </div>
             <form class="chatbot-input">
-                <input type="text" placeholder="Ask a question..." required>
-                <button type="submit" class="chatbot-submit">
+                <input type="text" data-i18n-placeholder="chatbot.placeholder" placeholder="Ask a question..." required>
+                <button type="submit" class="chatbot-submit" data-i18n-title="chatbot.send">
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </form>
@@ -546,5 +560,10 @@
             });
         });
     </script>
+<script src="assets/js/fix-language-switching.js"></script>
 </body>
 </html>
+
+
+
+

@@ -71,6 +71,18 @@
 
 /* Specific Component Responsive Adjustments */
 
+/* Page Banner */
+@media (max-width: 576px) {
+    .page-banner {
+        padding: 12rem 0 3rem;
+    }
+    
+    .page-title {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+}
+
 /* Navigation */
 @media (max-width: 991px) {
     .menu-toggle {

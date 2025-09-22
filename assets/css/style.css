@@ -202,6 +202,7 @@ img {
 /* Gradient Text */
 .gradient-text {
     background: linear-gradient(90deg, var(--color-red), var(--color-green));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -237,7 +238,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .logo {
@@ -283,6 +284,45 @@ img {
     cursor: pointer;
     font-size: 2.4rem;
     color: var(--color-black);
+}
+
+/* ------------- Page Banner ------------- */
+.page-banner {
+    padding: 15rem 0 6rem;
+    background-color: var(--color-off-white);
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+}
+
+.page-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--color-black);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: '/';
+    padding: 0 1rem;
+    color: var(--color-black);
+}
+
+.breadcrumb-item.active {
+    color: var(--color-red);
 }
 
 /* ------------- Hero Section ------------- */

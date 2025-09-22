@@ -92,6 +92,26 @@ class KadamiyaAIChatbot {
         this.fallbackResponse = fallbackResponse;
         this.welcomeMessage = welcomeMessage;
         this.chatHistory = [];
+        this.currentLanguage = window.currentLanguage || 'en';
+        
+        // Store a reference globally
+        window.kadamiyaChatbot = this;
+    }
+    
+    // Set the chatbot language
+    setLanguage(language) {
+        if (!['en', 'bn', 'hi'].includes(language)) {
+            console.error('Invalid language:', language);
+            return;
+        }
+        
+        this.currentLanguage = language;
+        console.log('Chatbot language set to:', this.currentLanguage);
+        
+        // Update welcome message based on language
+        if (chatbotTranslations && chatbotTranslations[this.currentLanguage]) {
+            this.welcomeMessage = chatbotTranslations[this.currentLanguage].greetingMessage;
+        }
     }
     
     // Initialize the chatbot
@@ -202,12 +222,26 @@ class KadamiyaAIChatbot {
             }
         }
         
-        // Return the best match or fallback
+        // Get response text based on current language
+        let responseText = this.fallbackResponse;
+        
         if (bestMatch && highestScore > 0) {
-            return bestMatch.response;
+            // If we have multi-language responses, use the appropriate one
+            if (typeof bestMatch.response === 'object' && bestMatch.response[this.currentLanguage]) {
+                responseText = bestMatch.response[this.currentLanguage];
+            } else {
+                responseText = bestMatch.response;
+            }
+        } else {
+            // Use translated fallback response if available
+            if (chatbotTranslations && 
+                chatbotTranslations[this.currentLanguage] && 
+                chatbotTranslations[this.currentLanguage].noAnswerMessage) {
+                responseText = chatbotTranslations[this.currentLanguage].noAnswerMessage;
+            }
         }
         
-        return this.fallbackResponse;
+        return responseText;
     }
     
     // Calculate how well the user message matches the keywords
@@ -237,6 +271,19 @@ class KadamiyaAIChatbot {
 
 // Initialize the chatbot when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Create instance
     window.kadamiyaChatbot = new KadamiyaAIChatbot(knowledgeBase, fallbackResponse, welcomeMessage);
+    
+    // Set current language
+    if (window.currentLanguage) {
+        window.kadamiyaChatbot.setLanguage(window.currentLanguage);
+    }
+    
+    // Initialize chatbot
     window.kadamiyaChatbot.init();
+    
+    // Initialize language support if the function is available
+    if (typeof initChatbotLanguageSupport === 'function') {
+        initChatbotLanguageSupport();
+    }
 });

@@ -1,6 +1,6 @@
 # The Sacred Kadamiya Tariqa Website
 
-This repository contains the official website for The Sacred Kadamiya Tariqa, providing information about spiritual practices, hierarchy, rules, and contact information.
+This repository contains the official website for The Sacred Kadamiya Tariqa, a mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity.
 
 ## Features
 
@@ -9,17 +9,21 @@ This repository contains the official website for The Sacred Kadamiya Tariqa, pr
 - Contact form with Netlify integration
 - Gallery and downloads sections
 - Mobile-responsive design
+- Multilingual support (English, Bengali, Hindi)
+- Payment gateway integration
+- Interactive chatbot
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
+- Multilingual support with custom i18n system
 - Netlify for hosting and form handling
 
 ## Deployment
 
-The website is deployed on Netlify. You can view it at: [The Sacred Kadamiya Tariqa](https://your-netlify-site-name.netlify.app)
+The website is deployed on Netlify with automatic deployments from GitHub.
 
 ## Development
 

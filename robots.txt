@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-netlify-site-name.netlify.app/sitemap.xml
+Sitemap: https://sacredkadamiyatariqa.netlify.app/sitemap.xml

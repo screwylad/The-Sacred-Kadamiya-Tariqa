@@ -1,0 +1,144 @@
+{
+  "general": {
+    "languageName": "English",
+    "selectLanguage": "Select Language"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "hierarchy": "Hierarchy",
+    "practices": "Practices",
+    "rules": "Rules",
+    "gallery": "Gallery",
+    "downloads": "Downloads",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "mainTitle": "The Sacred KADAMIYA TARIKA",
+    "welcomeMessage": "Welcome to the Official Site of The Sacred KADAMIYA TARIKA, the Tarika where divine blessings directly come from under the HOLY LEG (Kadam Mobarak) of our beloved Prophet HAZRAT MOHAMMAD (SAWS).",
+    "aboutName": "The literal meaning of the Arabic Term 'Kadam' is Leg and hence this Holy Tarika is named after our revered and beloved IMAM (founder) of the Sacred Tarika, IMAME TARIKAYE KADAMIYA MUHIUL KULUB MAHBUBE RAHMANI HAZRAT MAWLANA SHAH SUFI SYED AMZAD ALI AL-HASANI WAL-HUSSAINI AL-KADAMI (R) is supremely favored with the 'LEFT HOLY LEG' of our beloved PROPHET HAZRAT MOHAMMAD (SAWS).",
+    "mission": "KADAMIYA TARIKA is a mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity. Our goal is to attain proximity to Almighty Allah through LOVE and DEVOTION. We believe in the Power of community and the importance of building relationships with others. We welcome people of all races, religions, and cultures to join us in our journey towards Spirituality and Closeness to Almighty Allah."
+  },
+  "hero": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us"
+  },
+  "mission": {
+    "title": "Our Mission"
+  },
+  "about": {
+    "title": "About The Sacred Kadamiya Tarika",
+    "description1": "The literal meaning of the Arabic Term 'Kadam' is Leg and hence this Holy Tarika is named after our revered and beloved IMAM (founder) of the Sacred Tarika, IMAME TARIKAYE KADAMIYA MUHIUL KULUB MAHBUBE RAHMANI HAZRAT MAWLANA SHAH SUFI SYED AMZAD ALI AL-HASANI WAL-HUSSAINI AL-KADAMI (R) is supremely favored with the 'LEFT HOLY LEG' of our beloved PROPHET HAZRAT MOHAMMAD (SAWS).",
+    "description2": "KADAMIYA TARIKA is a mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity. Our goal is to attain proximity to Almighty Allah through LOVE and DEVOTION.",
+    "readMore": "Read More",
+    "paragraph1": "Since the creation of mankind, Almighty Allah, from time to time, has sent many luminous personalities in this world to guide mankind to the right path. The first one was PROPHET HAZRAT ADAM (Alaihis-salam) and the last Prophet was HAZRAT MOHAMMAD (Sallallahu alaihi was-salam). When the Prophethood was closed after him, Allah has been sending many of his selected friends (Oli-Allah) to this world with the noble duty of spreading divine knowledge to mankind.",
+    "paragraph2": "It is my privilege to introduce you with such a high ranking, illustrious, extensively knowledgeable and a most dignified person, a friend of Allah, Muhiul Kulub Mahbube Rahmani Hazrat Mawlana Shah Sufi Syed Amzad Ali Al-Hasani Wal-Hussaini Al-Kadami (R), the Imam of the Sacred Kadamiya Tarika.",
+    "paragraph3": "He was one of the descendants of Hazrat Syed Abdul Kader Zilani (R), the Iman of Kaderia Tarika. His forefather, Hazrat Shah Sufi Teg Burahn (R) came to Bengal along with one hundred followers (saints) to preach and spread Islam.",
+    "paragraph4": "By dint of his tenacious labor, sincerity and devotion Hazrat Muhiul Kulub Mahbube Rahmani (R) had reached to the top of Spiritual wisdom and he was awarded the title Khalifa means representative by Hazrat Fateh Ali Waisy (R).",
+    "paragraph5": "Hazrat Muhiul Kulub Mahbube Rahmani (R) was bestowed the KADAMIYA Tarika (Divine Path) by Allah, the Merciful, through his best friend our beloved prophet, Hazrat Mohmmad (SAWS) who taught him all the spiritual knowledge. He was also given the extra-ordinary power to give life to a dead heart by Almighty Allah. He narrated everything in details how he was given the KADAMIYA Tarika in his Book \"KASHFUL ASRAR\" written in Persian. The translated copy in Bengali of the Book \"KASHFUL ASRAR\" is available at DORBAR-E-SHAHE KADAMI. Vill & P.O. North Pawshar, P.S. Sirajdikhan, Dist. Munshiganj, Bangladesh.",
+    "paragraph6": "Hazrat Fateh Ali Waisy (R) was very happy that what he had been expecting throughout of his life was given to his student and he expressed gratefulness to Almighty Allah. Then he asked Hazrat Muhiul Kulub Mahbube Rahmani to go home and spread the blessings of KADAMIYA Tarika to the believers.",
+    "paragraph7": "Hazrat Muhiul Kulub Mahbube Rahmani (R) left for heavenly abode only at the age of 53 yrs 11 months on 2nd Saban, 1331 Hijri (32 Ashar, 1319 Bangla) leaving behind his two wives, five sons, six daughters and lakhs of devotees. His Holy Shrine is situated in a very silent place at Pawshar."
+  },
+  "explore": {
+    "title": "Explore More",
+    "hierarchyDesc": "Learn about the leadership succession of the Sacred Tarika.",
+    "faqDesc": "Answers to frequently asked questions about Kadamiya Tarika.",
+    "rulesDesc": "Guidelines and instructions for followers of the Sacred Tarika.",
+    "galleryDesc": "View images of significant places and events."
+  },
+  "hierarchy": {
+    "title": "Hierarchy of the Sacred Tarika",
+    "subtitle": "The Khalifas of DARBARE-E-SHAHE KADAMI (PAWSHAR SHARIF) is as follows:",
+    "khalifa1": "Hazrat Mawlana Shah-Sufi Syed Ajmal Ali Al-Hasani-Al-Kadami (R) Khalifaye Azam [the eldest son of Hazrat Muhiul Kulub Mahbube Rahmani(R)].",
+    "khalifa2": "Hazrat Mawlana Shah-Sufi Syed Abul Hasan Ahsan Ali Al-Hasani-Al-Kadami (R) Khalifaye Waisey Zaman [the second son of Hazrat Muhiul Kulub Mahbube Rahmani (R)].",
+    "khalifa3": "Hazrat Mawlana Shah-Sufi Syed Abul Mansoor Bakibillah Al-Hasani-Al-Kadami (R) [second Son of Hazrat Shah-Sufi Syed Mawlana Abul Hassan Ahsan Ali Al-Hasani-Al-Kadami (R)].",
+    "khalifa4": "Alhaj Hazrat Shah-S-fi Syed Abul Fazal Mohammd Habib Ullah Mahfuz Al-Hasani-Al-Kadami (R) [Eldest Son of Hazrat Shah-Sufi Syed Mawlana Abul Mansoor Bakibillah Al-Hasani-Al-Kadami (R)].",
+    "khalifa5": "Hazrat Mawlana Shah-Sufi Syed Abul Hasan Mohammad Mahbub-Ullah Al-Hasani-Al-Kadami (Eldest Son of Alhaj Shah-Sufi Syed Abul Fazal Mohammd Habib Ullah Mahfuz Al-Hasani-Al-Kadami (R)). (The present Sajjadanasin-Gadinasin of Darbar-e-Shahe Kadmi, Pawshar) ."
+  },
+  "faq": {
+    "title": "Preliminary Knowledge about Sacred KADAMIYA TARIKA",
+    "q1": "What is a Tarika?",
+    "a1": "The literal meaning of the Arabic word \"TARIKA\" is way/road/path. In the spiritual language for purification of soul/heart and to attain the knowledge of Hakekat and Marefat of Almighty Allah under the guidance and care of a spiritually knowledgeable Teacher is called a Tarika.",
+    "q2": "What do you mean by Pak Panjatan?",
+    "a2": "There are five personalities through whose mediation, one can extinguish the burning difficulties. They are: 1. Prophet Mohammad (SAWS) , 2. Hazrat Ali Asadullah (RA) , 3. Hazrat Fatema Zuhra (RA) , 4. Hazrat Hasan Mojtoba (RA) , 5. Hazrat Husan Sohadaye Karbala (RA).",
+    "q3": "What do you mean by Oli-Allah?",
+    "a3": "The meaning of the Arabic term \"Oli\" is friend and Oli-Allah means a friend of Allah. A man who is able to draw near Allah through supererogatory works is bestowed with innumerable favours, powers and dignity.",
+    "q4": "What is the Kadamiya Tarika?",
+    "a4": "The literal meaning of the Arabic term \"Kadam\" is leg. The KADAMIYA Tarika is one where the divine blessings come directly from under the holy leg (Kadam Mubarak) of our beloved prophet Hazrat Mohammad (SAWS) in the heart of the believer. It is a full-fledged Tarika and can't be the branch of any other Tarika.",
+    "q5": "Who is the founder Imam of KADAMIYA Tarika?",
+    "a5": "Hazrat Muhiul Kulub Mahbube Rahmani Shah Sufi Syed Mawlana Amzad Ali Al-Hasani Al-Kadami (R) is the founder Imam of Holy KADAMIYA Tarika.",
+    "q6": "Where is DARBAR-E-SHAHE KADAMI situated?",
+    "a6": "DARBAR-E-SHAHE KADAMI is situated in the North Pawshar Village of Sirajdikhan Police Station under Munshiganj District of Bangladesh.",
+    "q7": "What is a Sofir?",
+    "a7": "A Sofir is a person who has crossed a long way in his spiritual journey, but not yet reached to the goal but is given permission by his teacher (Murshid) to train up the students of lower classes. Sofir in fact, is a primary teacher."
+  },
+  "rules": {
+    "title": "Rules and Instructions to get involved",
+    "intro": "One who is interested in getting involved (become a disciple/follower) into the Sacred KADAMIYA TARIKA must have to obey some rules and instructions which are mentioned below:",
+    "rule1": "Act according to the Laws of Sharia.",
+    "rule2": "Keep away from Haram and adopt Halal.",
+    "rule3": "Not to tell a lie.",
+    "rule4": "Thinking yourself inferior to all."
+  },
+  "practices": {
+    "title": "The Daily Practices (Wazifa)",
+    "learnMore": "Learn All Practices",
+    "durudSharif": {
+      "label": "KADAMIYA TARIKA'S DURUD SHARIF:",
+      "text": "ALLAHUMMA SALLE ALA NORIKA WALA ALIHI WALA KADAMIHI WA SALLIM"
+    },
+    "dua": {
+      "label": "KADAMIYA TARIKA'S DUA:",
+      "text": "ALLAHUMMA CHABBIT KULUBANA ALA DINIKA WALA TARIKATIL KAL KADAMIYA WASHURNA ALA KADMEY HABIBIKA RAHMATULLIL ALAMIN. MOHAMMADANIL MUSTAFA CHALLALAHH TALA ALAIHI WALA ALIHI WA ACH CHAHABIHI MUNAZZIHINAL MUTAHHIRINAL AJMAYIN. BIRAKMATIKA YA ARAHMANIR RAHIM"
+    },
+    "fazrPractice": {
+      "label": "FAZR PRACTICE:",
+      "text": "Includes Fateha Sharif , Khatam Sharif , and Nafi and Isbat Zikr."
+    },
+    "magribPractice": {
+      "label": "MAGRIB PRACTICE:",
+      "text": "Includes Fateha Sharif and Murakaba (Meditation of Allah)."
+    },
+    "ishaPractice": {
+      "label": "ISHA PRACTICE:",
+      "text": "Recite Durud Sharif (313 TIMES) in order to receive the love, Ziyarat and Safayat of Prophet (SAWS)."
+    },
+    "maqamTitle": "The 9 Stations (Maqams) of the Sacred Kadamiya Tarika",
+    "maqam1": "FANAFISH SHEIKH.",
+    "maqam2": "FANAFIR RASUL.",
+    "maqam3": "FANAFILLAH.",
+    "maqam4": "BAKABILLAH.",
+    "maqam5": "ABDIYAT AND MABUDIYAT.",
+    "maqam6": "AMBIYAYE ULUL AZAM",
+    "maqam7": "MAHBUBIYATE MOHAMMODI",
+    "maqam8": "HAKIKATE MOHAMMODI.",
+    "maqam9": "HAKIKATE ALLAH JALLEH SHANUH."
+  },
+  "downloads": {
+    "title": "Available PDF Books",
+    "noBooksMessage": "PDF books will be available soon."
+  },
+  "contact": {
+    "title": "Contact Information",
+    "address": "DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF), UTTAR PAWSHAR, SIRAJDIKHAN, MUNSHIGANJ, DHAKA, BANGLADESH",
+    "phone": "+8801725774252; +8801926266156",
+    "email": "darbareshahekadmi@gmail.com, darbareshahekodomi@gmail.com",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formSubject": "Subject",
+    "formMessage": "Message",
+    "formSubmit": "Send Message"
+  },
+  "footer": {
+    "copyright": "© 2025 The Sacred Kadamiya Tariqa. All Rights Reserved.",
+    "socialMedia": "Follow Us"
+  },
+  "chatbot": {
+    "title": "Chat with us",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "greeting": "Welcome! How can I help you today?",
+    "loading": "Thinking..."
+  }
+}

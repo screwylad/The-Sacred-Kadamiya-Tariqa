@@ -26,7 +26,12 @@
     
     <!-- Stripe.js -->
     <script src="https://js.stripe.com/v3/"></script>
-</head>
+
+    <!-- Load i18n scripts -->
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n/i18n-loader.js"></script>
+    </head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -34,7 +39,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <div class="logo-placeholder" aria-label="Logo Placeholder">K</div>
-                    <span class="logo-text">The Sacred Kadamiya Tariqa</span>
+                    <span class="logo-text" data-i18n="header.title">The Sacred Kadamiya Tariqa</span>
                 </div>
                 
                 <div class="menu-toggle">
@@ -42,17 +47,26 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="hierarchy.html" class="nav-link">Hierarchy</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
-                    <li class="nav-item"><a href="practices.html" class="nav-link">Practices</a></li>
-                    <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="header.about">About</a></li>
+                    <li class="nav-item"><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
+                    <li class="nav-item"><a href="rules.html" class="nav-link" data-i18n="header.rules">Rules</a></li>
+                    <li class="nav-item"><a href="practices.html" class="nav-link" data-i18n="header.practices">Practices</a></li>
+                    <li class="nav-item"><a href="downloads.html" class="nav-link" data-i18n="header.downloads">Downloads</a></li>
                     <li class="nav-item"><a href="payment.html" class="nav-link active">Payment Gateway</a></li>
-                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link" data-i18n="header.gallery">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="header.contact">Contact</a></li>
                 </ul>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <span class="language-label" data-i18n="general.selectLanguage">Language:</span>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="bn">Bengali</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
             </nav>
         </div>
     </header>
@@ -63,7 +77,7 @@
             <h1 class="page-title">Payment Gateway</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Payment Gateway</li>
                 </ol>
             </nav>
@@ -80,7 +94,7 @@
             </div>
             
             <div class="payment-intro-content reveal">
-                <p>Welcome to the Sacred Kadamiya Tariqa payment gateway.</p>
+                <p data-i18n="payment.intro">Welcome to the Sacred Kadamiya Tariqa payment gateway.</p>
             </div>
         </div>
     </section>
@@ -89,51 +103,51 @@
     <section class="section bg-light" id="payment-form-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Process Payment</h2>
+                <h2 class="section-title" data-i18n="payment.title">Process Payment</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">All payments are processed securely through Stripe</p>
+                <p class="section-subtitle" data-i18n="payment.subtitle">All payments are processed securely through Stripe</p>
             </div>
             
             <div class="payment-container reveal">
                 <div class="payment-options">
                     <div class="amount-selector">
-                        <h3>Select Amount</h3>
+                        <h3 data-i18n="payment.amount.title">Select Amount</h3>
                         <div class="amount-options">
-                            <button class="amount-option" data-amount="10">$10</button>
-                            <button class="amount-option" data-amount="25">$25</button>
-                            <button class="amount-option" data-amount="50">$50</button>
-                            <button class="amount-option" data-amount="100">$100</button>
-                            <button class="amount-option" data-amount="500">$500</button>
-                            <button class="amount-option custom-amount">Custom</button>
+                            <button class="amount-option" data-amount="10" data-i18n="payment.amount.ten">$10</button>
+                            <button class="amount-option" data-amount="25" data-i18n="payment.amount.twentyFive">$25</button>
+                            <button class="amount-option" data-amount="50" data-i18n="payment.amount.fifty">$50</button>
+                            <button class="amount-option" data-amount="100" data-i18n="payment.amount.hundred">$100</button>
+                            <button class="amount-option" data-amount="500" data-i18n="payment.amount.fiveHundred">$500</button>
+                            <button class="amount-option custom-amount" data-i18n="payment.amount.custom">Custom</button>
                         </div>
                         <div class="custom-amount-input" style="display: none;">
-                            <label for="custom-amount">Enter Amount ($):</label>
-                            <input type="number" id="custom-amount" min="1" step="1" placeholder="Enter amount">
+                            <label for="custom-amount" data-i18n="payment.amount.customLabel">Enter Amount ($):</label>
+                            <input type="number" id="custom-amount" min="1" step="1" data-i18n-placeholder="payment.amount.customPlaceholder" placeholder="Enter amount">
                         </div>
                     </div>
                     
                     <div class="payment-type">
-                        <h3>Payment Frequency</h3>
+                        <h3 data-i18n="payment.frequency.title">Payment Frequency</h3>
                         <div class="payment-type-options">
                             <div class="payment-type-option">
                                 <input type="radio" name="payment-type" id="one-time" value="one-time" checked>
-                                <label for="one-time">One-time Payment</label>
+                                <label for="one-time" data-i18n="payment.frequency.oneTime">One-time Payment</label>
                             </div>
                             <div class="payment-type-option">
                                 <input type="radio" name="payment-type" id="monthly" value="monthly">
-                                <label for="monthly">Monthly Subscription</label>
+                                <label for="monthly" data-i18n="payment.frequency.monthly">Monthly Subscription</label>
                             </div>
                         </div>
                     </div>
                     
                     <div class="payment-purpose">
-                        <h3>Payment Purpose</h3>
+                        <h3 data-i18n="payment.purpose.title">Payment Purpose</h3>
                         <select id="payment-purpose" class="form-control">
-                            <option value="service">Service Fee</option>
-                            <option value="materials">Educational Materials</option>
-                            <option value="membership">Membership</option>
-                            <option value="event">Event Registration</option>
-                            <option value="other">Other</option>
+                            <option value="service" data-i18n="payment.purpose.service">Service Fee</option>
+                            <option value="materials" data-i18n="payment.purpose.materials">Educational Materials</option>
+                            <option value="membership" data-i18n="payment.purpose.membership">Membership</option>
+                            <option value="event" data-i18n="payment.purpose.event">Event Registration</option>
+                            <option value="other" data-i18n="payment.purpose.other">Other</option>
                         </select>
                     </div>
                 </div>
@@ -141,17 +155,17 @@
                 <div class="payment-form-wrapper">
                     <form id="payment-form">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <label for="name" data-i18n="payment.form.nameLabel">Full Name</label>
+                            <input type="text" id="name" class="form-control" data-i18n-placeholder="payment.form.namePlaceholder" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <label for="email" data-i18n="payment.form.emailLabel">Email Address</label>
+                            <input type="email" id="email" class="form-control" data-i18n-placeholder="payment.form.emailPlaceholder" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="card-element">Credit or Debit Card</label>
+                            <label for="card-element" data-i18n="payment.form.cardLabel">Credit or Debit Card</label>
                             <div id="card-element" class="form-control card-field">
                                 <!-- Stripe Card Element will be inserted here -->
                             </div>
@@ -159,13 +173,13 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Message (Optional)</label>
-                            <textarea id="message" class="form-control" rows="3" placeholder="Include a message with your payment..."></textarea>
+                            <label for="message" data-i18n="payment.form.messageLabel">Message (Optional)</label>
+                            <textarea id="message" class="form-control" rows="3" data-i18n-placeholder="payment.form.messagePlaceholder" placeholder="Include a message with your payment..."></textarea>
                         </div>
                         
                         <div class="form-group">
                             <button type="submit" id="submit-button" class="btn btn-primary payment-button">
-                                <span id="button-text">Process Payment</span>
+                                <span id="button-text" data-i18n="payment.form.submitButton">Process Payment</span>
                                 <span id="spinner" class="spinner hidden"></span>
                             </button>
                         </div>
@@ -182,12 +196,12 @@
                 <div class="success-icon">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <h2>Thank You for Your Support!</h2>
-                <p class="success-details">Your payment has been successfully processed. A confirmation email has been sent to your inbox with the details of your transaction.</p>
-                <p class="success-blessing">May Allah bless you abundantly for your generosity and support of the spiritual path.</p>
+                <h2 data-i18n="payment.success.title">Thank You for Your Support!</h2>
+                <p class="success-details" data-i18n="payment.success.details">Your payment has been successfully processed. A confirmation email has been sent to your inbox with the details of your transaction.</p>
+                <p class="success-blessing" data-i18n="payment.success.blessing">May Allah bless you abundantly for your generosity and support of the spiritual path.</p>
                 <div class="success-actions">
-                    <a href="index.html" class="btn btn-secondary">Return to Homepage</a>
-                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    <a href="index.html" class="btn btn-secondary" data-i18n="payment.success.homeButton">Return to Homepage</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="payment.success.contactButton">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -197,9 +211,9 @@
     <section class="section" id="alternative-payments">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Other Ways to pay</h2>
+                <h2 class="section-title" data-i18n="payment.alternative.title">Other Ways to pay</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">Alternative methods for supporting our work</p>
+                <p class="section-subtitle" data-i18n="payment.alternative.subtitle">Alternative methods for supporting our work</p>
             </div>
             
             <div class="alternative-methods-container">
@@ -207,12 +221,12 @@
                     <div class="method-icon">
                         <i class="fas fa-university"></i>
                     </div>
-                    <h3 class="method-title">Bank Transfer</h3>
+                    <h3 class="method-title" data-i18n="payment.bank.title">Bank Transfer</h3>
                     <div class="method-details">
-                        <p><strong>Account Name:</strong> The Sacred Kadamiya Tariqa</p>
-                        <p><strong>Bank:</strong> International Islamic Bank</p>
-                        <p><strong>Account Number:</strong> 12345678910</p>
-                        <p><strong>SWIFT/BIC:</strong> IIBDBD01</p>
+                        <p><strong data-i18n="payment.bank.accountName">Account Name:</strong> <span data-i18n="payment.bank.accountNameValue">The Sacred Kadamiya Tariqa</span></p>
+                        <p><strong data-i18n="payment.bank.bankName">Bank:</strong> <span data-i18n="payment.bank.bankNameValue">International Islamic Bank</span></p>
+                        <p><strong data-i18n="payment.bank.accountNumber">Account Number:</strong> <span data-i18n="payment.bank.accountNumberValue">12345678910</span></p>
+                        <p><strong data-i18n="payment.bank.swift">SWIFT/BIC:</strong> <span data-i18n="payment.bank.swiftValue">IIBDBD01</span></p>
                     </div>
                 </div>
                 
@@ -220,10 +234,10 @@
                     <div class="method-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3 class="method-title">Mail a Check</h3>
+                    <h3 class="method-title" data-i18n="payment.check.title">Mail a Check</h3>
                     <div class="method-details">
-                        <p>Please make checks payable to "The Sacred Kadamiya Tariqa" and mail to:</p>
-                        <p>DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF)<br>
+                        <p data-i18n="payment.check.instructions">Please make checks payable to "The Sacred Kadamiya Tariqa" and mail to:</p>
+                        <p data-i18n="payment.check.address">DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF)<br>
                         UTTAR PAWSHAR, SIRAJDIKHAN<br>
                         MUNSHIGANJ, DHAKA<br>
                         BANGLADESH</p>
@@ -333,8 +347,8 @@
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="hierarchy.html">Hierarchy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                        <li><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
                         <li><a href="rules.html">Rules & Instructions</a></li>
                         <li><a href="practices.html">Daily Practices</a></li>
                     </ul>
@@ -449,5 +463,10 @@
             });
         });
     </script>
+<script src="assets/js/fix-language-switching.js"></script>
 </body>
 </html>
+
+
+
+

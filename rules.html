@@ -23,7 +23,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-</head>
+
+    <!-- Load i18n scripts -->
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n/i18n-loader.js"></script>
+    </head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -31,7 +36,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <div class="logo-placeholder" aria-label="Logo Placeholder">K</div>
-                    <span class="logo-text">The Sacred Kadamiya Tariqa</span>
+                    <span class="logo-text" data-i18n="header.title">The Sacred Kadamiya Tariqa</span>
                 </div>
                 
                 <div class="menu-toggle">
@@ -39,17 +44,26 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="hierarchy.html" class="nav-link">Hierarchy</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li class="nav-item"><a href="rules.html" class="nav-link active">Rules</a></li>
-                    <li class="nav-item"><a href="practices.html" class="nav-link">Practices</a></li>
-                    <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
-                    <li class="nav-item"><a href="payment.html" class="nav-link">Payment Gateway</a></li>
-                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="header.about">About</a></li>
+                    <li class="nav-item"><a href="hierarchy.html" class="nav-link" data-i18n="header.hierarchy">Hierarchy</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link" data-i18n="header.faq">FAQ</a></li>
+                    <li class="nav-item"><a href="rules.html" class="nav-link" data-i18n="header.rules">Rules</a></li>
+                    <li class="nav-item"><a href="practices.html" class="nav-link" data-i18n="header.practices">Practices</a></li>
+                    <li class="nav-item"><a href="downloads.html" class="nav-link" data-i18n="header.downloads">Downloads</a></li>
+                    <li class="nav-item"><a href="payment.html" class="nav-link" data-i18n="header.payment">Payment Gateway</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link" data-i18n="header.gallery">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="header.contact">Contact</a></li>
                 </ul>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <span class="language-label" data-i18n="general.selectLanguage">Language:</span>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="bn">Bengali</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
             </nav>
         </div>
     </header>
@@ -57,11 +71,11 @@
     <!-- Page Banner -->
     <section class="page-banner">
         <div class="container">
-            <h1 class="page-title">Rules and Instructions</h1>
+            <h1 class="page-title" data-i18n="rules.pageTitle">Rules and Instructions</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Rules</li>
+                    <li class="breadcrumb-item"><a href="index.html" class="nav-link" data-i18n="header.home">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" data-i18n="header.rules">Rules</li>
                 </ol>
             </nav>
         </div>
@@ -71,46 +85,46 @@
     <section class="section" id="rules">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Rules and Instructions to get involved</h2>
+                <h2 class="section-title" data-i18n="rules.sectionTitle">Rules and Instructions to get involved</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">Guidelines for becoming a disciple/follower of the Sacred KADAMIYA TARIKA</p>
+                <p class="section-subtitle" data-i18n="rules.sectionSubtitle">Guidelines for becoming a disciple/follower of the Sacred KADAMIYA TARIKA</p>
             </div>
             
             <div class="rules-container">
                 <div class="introduction reveal">
-                    <p class="intro-text">One who is interested in getting involved (become a disciple/follower) into the Sacred KADAMIYA TARIKA must have to obey some rules and instructions which are mentioned below:</p>
+                    <p class="intro-text" data-i18n="rules.introText">One who is interested in getting involved (become a disciple/follower) into the Sacred KADAMIYA TARIKA must have to obey some rules and instructions which are mentioned below:</p>
                 </div>
                 
                 <ul class="rules-list sequential-fade">
                     <li class="rule-item">
                         <div class="rule-number">1</div>
                         <div class="rule-content">
-                            <h3>Act according to the Laws of Sharia</h3>
-                            <p>Follow the divine laws as revealed in the Holy Quran and the teachings of the Prophet Muhammad (SAWS). Adherence to Sharia is the foundation of spiritual growth in the Sacred Kadamiya Tarika.</p>
+                            <h3 data-i18n="rules.rule1.title">Act according to the Laws of Sharia</h3>
+                            <p data-i18n="rules.rule1.description">Follow the divine laws as revealed in the Holy Quran and the teachings of the Prophet Muhammad (SAWS). Adherence to Sharia is the foundation of spiritual growth in the Sacred Kadamiya Tarika.</p>
                         </div>
                     </li>
                     
                     <li class="rule-item">
                         <div class="rule-number">2</div>
                         <div class="rule-content">
-                            <h3>Keep away from Haram and adopt Halal</h3>
-                            <p>Maintain purity in actions, thoughts, and consumption by avoiding what is forbidden (Haram) and embracing what is permissible (Halal) according to Islamic teachings.</p>
+                            <h3 data-i18n="rules.rule2.title">Keep away from Haram and adopt Halal</h3>
+                            <p data-i18n="rules.rule2.description">Maintain purity in actions, thoughts, and consumption by avoiding what is forbidden (Haram) and embracing what is permissible (Halal) according to Islamic teachings.</p>
                         </div>
                     </li>
                     
                     <li class="rule-item">
                         <div class="rule-number">3</div>
                         <div class="rule-content">
-                            <h3>Not to tell a lie</h3>
-                            <p>Uphold honesty and truthfulness in all aspects of life. Speaking the truth is a cornerstone of spiritual development and builds trust among the community of followers.</p>
+                            <h3 data-i18n="rules.rule3.title">Not to tell a lie</h3>
+                            <p data-i18n="rules.rule3.description">Uphold honesty and truthfulness in all aspects of life. Speaking the truth is a cornerstone of spiritual development and builds trust among the community of followers.</p>
                         </div>
                     </li>
                     
                     <li class="rule-item">
                         <div class="rule-number">4</div>
                         <div class="rule-content">
-                            <h3>Thinking yourself inferior to all</h3>
-                            <p>Practice humility and modesty in your dealings with others. Recognize the divine spark in every being and approach all interactions with respect and without arrogance.</p>
+                            <h3 data-i18n="rules.rule4.title">Thinking yourself inferior to all</h3>
+                            <p data-i18n="rules.rule4.description">Practice humility and modesty in your dealings with others. Recognize the divine spark in every being and approach all interactions with respect and without arrogance.</p>
                         </div>
                     </li>
                 </ul>
@@ -118,8 +132,8 @@
                 <div class="rules-note reveal">
                     <div class="note-icon"><i class="fas fa-lightbulb"></i></div>
                     <div class="note-content">
-                        <h3>Guidance and Support</h3>
-                        <p>Followers are encouraged to seek guidance from their spiritual teacher (Murshid) when facing difficulties in adhering to these rules. The journey of spiritual growth is continuous, and support is always available within the Sacred Kadamiya Tarika community.</p>
+                        <h3 data-i18n="rules.guidance.title">Guidance and Support</h3>
+                        <p data-i18n="rules.guidance.description">Followers are encouraged to seek guidance from their spiritual teacher (Murshid) when facing difficulties in adhering to these rules. The journey of spiritual growth is continuous, and support is always available within the Sacred Kadamiya Tarika community.</p>
                     </div>
                 </div>
             </div>
@@ -130,7 +144,7 @@
     <section class="section bg-light" id="spiritual-ethics">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Spiritual Ethics</h2>
+                <h2 class="section-title" data-i18n="ethics.title">Spiritual Ethics</h2>
                 <div class="divider"></div>
             </div>
             
@@ -141,8 +155,8 @@
                             <div class="ethics-icon">
                                 <i class="fas fa-heart"></i>
                             </div>
-                            <h3 class="ethics-title">Love and Devotion</h3>
-                            <p>Cultivate love for Almighty Allah and His Prophet (SAWS). Let devotion be the driving force behind all your spiritual practices and daily actions.</p>
+                            <h3 class="ethics-title" data-i18n="ethics.love.title">Love and Devotion</h3>
+                            <p data-i18n="ethics.love.description">Cultivate love for Almighty Allah and His Prophet (SAWS). Let devotion be the driving force behind all your spiritual practices and daily actions.</p>
                         </div>
                     </div>
                     
@@ -151,8 +165,8 @@
                             <div class="ethics-icon">
                                 <i class="fas fa-hands-helping"></i>
                             </div>
-                            <h3 class="ethics-title">Service to Humanity</h3>
-                            <p>Serve others with compassion and kindness, recognizing that helping those in need is a form of worship and a path to spiritual elevation.</p>
+                            <h3 class="ethics-title" data-i18n="ethics.service.title">Service to Humanity</h3>
+                            <p data-i18n="ethics.service.description">Serve others with compassion and kindness, recognizing that helping those in need is a form of worship and a path to spiritual elevation.</p>
                         </div>
                     </div>
                     
@@ -161,8 +175,8 @@
                             <div class="ethics-icon">
                                 <i class="fas fa-seedling"></i>
                             </div>
-                            <h3 class="ethics-title">Self-Knowledge</h3>
-                            <p>Pursue inner reflection and self-awareness. Understanding oneself is essential for growth on the spiritual path.</p>
+                            <h3 class="ethics-title" data-i18n="ethics.selfKnowledge.title">Self-Knowledge</h3>
+                            <p data-i18n="ethics.selfKnowledge.description">Pursue inner reflection and self-awareness. Understanding oneself is essential for growth on the spiritual path.</p>
                         </div>
                     </div>
                 </div>
@@ -173,8 +187,8 @@
                             <div class="ethics-icon">
                                 <i class="fas fa-balance-scale"></i>
                             </div>
-                            <h3 class="ethics-title">Justice and Equity</h3>
-                            <p>Uphold fairness in all dealings and stand for what is right. Practice justice even when it is against your own interests.</p>
+                            <h3 class="ethics-title" data-i18n="ethics.justice.title">Justice and Equity</h3>
+                            <p data-i18n="ethics.justice.description">Uphold fairness in all dealings and stand for what is right. Practice justice even when it is against your own interests.</p>
                         </div>
                     </div>
                     
@@ -183,8 +197,8 @@
                             <div class="ethics-icon">
                                 <i class="fas fa-peace"></i>
                             </div>
-                            <h3 class="ethics-title">Inner Peace</h3>
-                            <p>Cultivate tranquility within yourself through regular spiritual practices and mindfulness in daily life.</p>
+                            <h3 class="ethics-title" data-i18n="ethics.peace.title">Inner Peace</h3>
+                            <p data-i18n="ethics.peace.description">Cultivate tranquility within yourself through regular spiritual practices and mindfulness in daily life.</p>
                         </div>
                     </div>
                     
@@ -193,8 +207,8 @@
                             <div class="ethics-icon">
                                 <i class="fas fa-users"></i>
                             </div>
-                            <h3 class="ethics-title">Community</h3>
-                            <p>Strengthen bonds with fellow followers and contribute positively to the wider community of believers.</p>
+                            <h3 class="ethics-title" data-i18n="ethics.community.title">Community</h3>
+                            <p data-i18n="ethics.community.description">Strengthen bonds with fellow followers and contribute positively to the wider community of believers.</p>
                         </div>
                     </div>
                 </div>
@@ -206,11 +220,11 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-content text-center">
-                <h2 class="cta-title reveal">Ready to Begin Your Spiritual Journey?</h2>
-                <p class="cta-text reveal delay-200">Learn about the daily practices that will guide you on the path of the Sacred Kadamiya Tariqa.</p>
+                <h2 class="cta-title reveal" data-i18n="cta.title">Ready to Begin Your Spiritual Journey?</h2>
+                <p class="cta-text reveal delay-200" data-i18n="cta.text">Learn about the daily practices that will guide you on the path of the Sacred Kadamiya Tariqa.</p>
                 <div class="cta-buttons reveal delay-400">
-                    <a href="practices.html" class="btn btn-primary">Explore Daily Practices</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact for Guidance</a>
+                    <a href="practices.html" class="btn btn-primary" data-i18n="cta.explorePractices">Explore Daily Practices</a>
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="cta.contactGuidance">Contact for Guidance</a>
                 </div>
             </div>
         </div>
@@ -222,48 +236,48 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <h4 class="footer-title">The Sacred Kadamiya Tariqa</h4>
+                        <h4 class="footer-title" data-i18n="footer.title">The Sacred Kadamiya Tariqa</h4>
                     </div>
-                    <p>A mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity.</p>
+                    <p data-i18n="footer.description">A mystical Islamic path of enlightenment that emphasizes self-knowledge, spiritual growth, and service to humanity.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Quick Links</h4>
+                    <h4 class="footer-title" data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="hierarchy.html">Hierarchy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="rules.html">Rules & Instructions</a></li>
-                        <li><a href="practices.html">Daily Practices</a></li>
+                        <li><a href="about.html" data-i18n="header.about">About Us</a></li>
+                        <li><a href="hierarchy.html" data-i18n="header.hierarchy">Hierarchy</a></li>
+                        <li><a href="faq.html" data-i18n="header.faq">FAQ</a></li>
+                        <li><a href="rules.html" data-i18n="header.rules">Rules & Instructions</a></li>
+                        <li><a href="practices.html" data-i18n="header.practices">Daily Practices</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact Us</h4>
+                    <h4 class="footer-title" data-i18n="footer.contactUs">Contact Us</h4>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt contact-icon"></i>
                         <div class="contact-details">
-                            <p>DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF), UTTAR PAWSHAR, SIRAJDIKHAN, MUNSHIGANJ, DHAKA, BANGLADESH</p>
+                            <p data-i18n="footer.address">DARBAR-E-SHAHE KADMI (PAWSHAR SHARIF), UTTAR PAWSHAR, SIRAJDIKHAN, MUNSHIGANJ, DHAKA, BANGLADESH</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone contact-icon"></i>
                         <div class="contact-details">
-                            <p>+8801725774252</p>
-                            <p>+8801926266156</p>
+                            <p data-i18n="footer.phone1">+8801725774252</p>
+                            <p data-i18n="footer.phone2">+8801926266156</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope contact-icon"></i>
                         <div class="contact-details">
-                            <p><a href="mailto:darbareshahekadmi@gmail.com">darbareshahekadmi@gmail.com</a></p>
+                            <p><a href="mailto:darbareshahekadmi@gmail.com" data-i18n="footer.email">darbareshahekadmi@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-social-links">
-                <h4>Connect With Us</h4>
+                <h4 data-i18n="footer.connect">Connect With Us</h4>
                 <div class="social-links">
                     <a href="https://facebook.com/thekadimiatarika" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://youtube.com/c/kadimiatarika" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
@@ -271,7 +285,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 The Sacred Kadamiya Tariqa. All Rights Reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 The Sacred Kadamiya Tariqa. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -283,7 +297,7 @@
         </div>
         <div class="chatbot-container">
             <div class="chatbot-header">
-                <h3 class="chatbot-title">Kadamiya Tariqa Support</h3>
+                <h3 class="chatbot-title" data-i18n="chatbot.title">Kadamiya Tariqa Support</h3>
                 <div class="chatbot-close">
                     <i class="fas fa-times"></i>
                 </div>
@@ -292,8 +306,8 @@
                 <!-- Messages will be added here dynamically -->
             </div>
             <form class="chatbot-input">
-                <input type="text" placeholder="Ask a question..." required>
-                <button type="submit" class="chatbot-submit">
+                <input type="text" data-i18n-placeholder="chatbot.placeholder" placeholder="Ask a question..." required>
+                <button type="submit" class="chatbot-submit" data-i18n-title="chatbot.send">
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </form>
@@ -303,5 +317,10 @@
     <!-- JavaScript Files -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/chatbot.js"></script>
+<script src="assets/js/fix-language-switching.js"></script>
 </body>
 </html>
+
+
+
+
