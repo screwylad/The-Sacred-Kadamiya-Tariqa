@@ -19,7 +19,7 @@ This repository contains the official website for The Sacred Kadamiya Tariqa, pr
 
 ## Deployment
 
-The website is deployed on Netlify. You can view it at: [The Sacred Kadamiya Tariqa](https://your-netlify-site-name.netlify.app)
+The website is deployed on Netlify. You can view it at: [The Sacred Kadamiya Tariqa](https://sacredkadamiyatariqa.netlify.app)
 
 ## Development
 
